@@ -1,4 +1,5 @@
 # frozen_string_literal: true
+
 class Spirlctl < Formula
   desc "SPIRL CLI"
   homepage "https://www.spirl.com/"
