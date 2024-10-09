@@ -10,7 +10,7 @@ class Spirlctl < Formula
   on_macos do
     on_arm do
       url "https://spirl-releases.s3.us-west-2.amazonaws.com/spirlctl/v0.15.1-dirty/spirlctl-v0.15.1-dirty-darwin-arm64.tar.gz"
-      sha256 "ca2195a772daa0e12e414821752225738f1241a8d423145ef9e90d0f11fb4de7"
+      sha256 "00182ec6eae760383dc557fa890541059977b562003e39d8799ced7f9d755b1c"
 
       def install
         bin.install "spirlctl"
@@ -22,7 +22,7 @@ class Spirlctl < Formula
     on_arm do
       if Hardware::CPU.is_64_bit?
         url "https://spirl-releases.s3.us-west-2.amazonaws.com/spirlctl/v0.15.1-dirty/spirlctl-v0.15.1-dirty-linux-arm64.tar.gz"
-        sha256 "1b4aeb44472484c51eb26e03bae6972a19333275a2a08324428f1c84c4da874e"
+        sha256 "8c4d8c0096ade7c93bf48f20a56a39574750e878836072f057c8a441abf9a644"
 
         def install
           bin.install "spirlctl"
