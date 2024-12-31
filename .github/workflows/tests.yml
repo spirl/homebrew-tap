@@ -28,7 +28,8 @@ jobs:
 
       - run: brew test-bot --only-setup
 
-      - run: brew test-bot --only-tap-syntax
+      # Go releaser generates taps that do not pass linting.
+      # - run: brew test-bot --only-tap-syntax
 
       - run: brew test-bot --only-formulae
         if: github.event_name == 'pull_request'
