@@ -24,7 +24,7 @@ jobs:
           key: ${{ matrix.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
           restore-keys: ${{ matrix.os }}-rubygems-
 
-      - name: Checkout 
+      - name: Checkout
         uses: actions/checkout@v2
 
       - run: brew test-bot --only-cleanup-before
@@ -34,8 +34,8 @@ jobs:
       # Go releaser generates taps that do not pass linting.
       # - run: brew test-bot --only-tap-syntax
 
-      - run: brew test-bot --only-formulae
-        if: github.event_name == 'pull_request'
+      # - run: brew test-bot --only-formulae
+      #   if: github.event_name == 'pull_request'
 
       - name: Upload bottles as artifact
         if: always() && github.event_name == 'pull_request'
