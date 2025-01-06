@@ -24,9 +24,6 @@ jobs:
           key: ${{ matrix.os }}-rubygems-${{ steps.set-up-homebrew.outputs.gems-hash }}
           restore-keys: ${{ matrix.os }}-rubygems-
 
-      - name: Checkout
-        uses: actions/checkout@v2
-
       - run: brew test-bot --only-cleanup-before
 
       - run: brew test-bot --only-setup
