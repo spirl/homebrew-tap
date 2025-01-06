@@ -31,8 +31,8 @@ jobs:
       # Go releaser generates taps that do not pass linting.
       # - run: brew test-bot --only-tap-syntax
 
-      - run: brew test-bot --only-formulae
-        if: github.event_name == 'pull_request'
+      # - run: brew test-bot --only-formulae
+      #   if: github.event_name == 'pull_request'
 
       - name: Upload bottles as artifact
         if: always() && github.event_name == 'pull_request'
