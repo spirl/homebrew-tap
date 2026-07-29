@@ -5,20 +5,20 @@
 class Spirlctl < Formula
   desc "SPIRL CLI"
   homepage "https://www.spirl.com/"
-  version "0.35.0-rc3"
+  version "0.35.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://spirl-releases.s3.us-west-2.amazonaws.com/spirlctl/v0.35.0-rc3/spirlctl-v0.35.0-rc3-darwin-amd64.tar.gz"
-      sha256 "1437f31d1f44ffb811706a0ee46b8fd450dbfe470ac418b18087fc9eb8a9730f"
+      url "https://spirl-releases.s3.us-west-2.amazonaws.com/spirlctl/v0.35.0/spirlctl-v0.35.0-darwin-amd64.tar.gz"
+      sha256 "4733d4e222356472e143f0f7882f46e8eb08bae029f2c6e4008811a57ba6163a"
 
       def install
         bin.install "spirlctl"
       end
     end
     if Hardware::CPU.arm?
-      url "https://spirl-releases.s3.us-west-2.amazonaws.com/spirlctl/v0.35.0-rc3/spirlctl-v0.35.0-rc3-darwin-arm64.tar.gz"
-      sha256 "a78caad272532c61382441f548b28ff3cd34c8e5d91a8d1b03bfc191acd0fdf7"
+      url "https://spirl-releases.s3.us-west-2.amazonaws.com/spirlctl/v0.35.0/spirlctl-v0.35.0-darwin-arm64.tar.gz"
+      sha256 "c698bbdd58bc4147602fc7a52f67bc4822eda303ff6a4049260611b51d32bdbc"
 
       def install
         bin.install "spirlctl"
@@ -28,15 +28,15 @@ class Spirlctl < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://spirl-releases.s3.us-west-2.amazonaws.com/spirlctl/v0.35.0-rc3/spirlctl-v0.35.0-rc3-linux-amd64.tar.gz"
-      sha256 "cba4f3f1f9e14b27af60532ad0caa996f5c341ce81879b1376d34fab8226706b"
+      url "https://spirl-releases.s3.us-west-2.amazonaws.com/spirlctl/v0.35.0/spirlctl-v0.35.0-linux-amd64.tar.gz"
+      sha256 "10e031a0955d88581856dd0dc81f19872e063f540b39140c958d9ffd3f02ba31"
       def install
         bin.install "spirlctl"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://spirl-releases.s3.us-west-2.amazonaws.com/spirlctl/v0.35.0-rc3/spirlctl-v0.35.0-rc3-linux-arm64.tar.gz"
-      sha256 "e9cfc8316848aeff25f228185314fd508a451ed0bca65e178e2e9ad6660ad011"
+      url "https://spirl-releases.s3.us-west-2.amazonaws.com/spirlctl/v0.35.0/spirlctl-v0.35.0-linux-arm64.tar.gz"
+      sha256 "b46f6468828e7a2cd6489ea641912116be778d1bdef0444c0e1c570bacd8878e"
       def install
         bin.install "spirlctl"
       end
